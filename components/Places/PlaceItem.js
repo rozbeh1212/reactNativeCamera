@@ -3,7 +3,7 @@ import React from "react";
 
 export default function PlaceItem({ place, onSelect }) {
   return (
-    <Pressable onPress={onSelcet}>
+    <Pressable onPress={onSelect}>
       <Image source={{ uri: place.imageUri }} />
       <View>
         <Text>{place.title}</Text>
@@ -16,5 +16,5 @@ export default function PlaceItem({ place, onSelect }) {
 const styles = StyleSheet.create({
 
 
- 
+
 });

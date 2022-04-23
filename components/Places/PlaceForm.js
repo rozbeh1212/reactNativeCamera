@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Map () {
+export default function PlaceForm() {
   return (
     <View>
-      <Text>Map </Text>
+      <Text>PlaceForm</Text>
     </View>
   )
 }
