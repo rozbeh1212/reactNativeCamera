@@ -12,11 +12,20 @@ export default function App() {
     <>
       <StatusBar style='dark' />
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          ScreenOptions={{
+            headerStyle: {
+              backgroundColor: "#1e90ff",
+            },
+            headerTintColor: "darkgrey",
+            contentStyle:{backgroundColor: 'darkgrey'},
+          }}
+        >
           <Stack.Screen
             name='AllPlaces'
             component={AllPlaces}
-            opption={({navigation}) => ({
+            opption={({ navigation }) => ({
+              title: "Favorite places",
               headerRight: ({ tintColor }) => (
                 <IconButton
                   icon='add'
@@ -30,7 +39,13 @@ export default function App() {
               ),
             })}
           />
-          <Stack.Screen name='AddPlace' component={AddPlace} />
+          <Stack.Screen
+            name='AddPlace'
+            component={AddPlace}
+            opption={{
+              title: "Add a new place",
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
